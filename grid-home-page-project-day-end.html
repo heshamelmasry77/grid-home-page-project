@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: grid home page project :: </title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 150px;
+            grid-template-rows: auto auto 1fr auto;
+            /*AUTO MEANS THAT IT WILL TAKE WHATEVER */
+            /*IS THE SIZE OF THE ELEMENT CONTENT IS*/
+            grid-template-areas:
+                    "header header"
+                    "nav sidebar"
+                    "content sidebar"
+                    "footer footer";
+        }
+
+        .header {
+            grid-area: header;
+            font-size: 2rem;
+            background-color: #BADA55;
+            color: #069;
+            text-align: center;
+            padding: 1rem;
+            text-transform: capitalize;
+        }
+
+        .nav {
+            grid-area: nav;
+            background-color: #BADA55;
+            color: #069;
+            border-top: 1px solid #024;
+            padding: .5rem;
+        }
+
+        .nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 1.5rem;
+        }
+
+        nav ul li {
+            padding: .5rem;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #B00B;
+            color: white;
+            padding: .5rem;
+            font-size: 1.5rem;
+        }
+
+        .content {
+            grid-area: content;
+            margin: 1rem;
+            font-size: 1.5rem;
+
+        }
+
+        .content h2 {
+            margin: 0;
+        }
+
+        .footer {
+            grid-area: footer;
+            font-size: 1.5rem;
+            background-color: #BADA55;
+            color: #069;
+            text-align: center;
+            padding: .5rem;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body class="grid-container">
+<header class="header">
+    title
+</header>
+
+<nav class="nav">
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+</nav>
+
+<main class="content">
+    <article>
+        <h2>Header</h2>
+        <p>Cur orgia messis?Green people yell with assimilat
+            ion at the photonic solar sphere!Habitios ridetis in cirpi!
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+        </p>
+    </article>
+</main>
+
+<aside class="sidebar">
+    Jolly rogers grow on hunger at fort charles!
+</aside>
+
+<footer class="footer">
+    copyrights
+</footer>
+</body>
+</html>
