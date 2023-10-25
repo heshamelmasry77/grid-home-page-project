@@ -11,22 +11,84 @@
         }
 
         body {
-
+            min-height: 100vh;
+            margin: 0;
         }
 
-        .container {
+        .grid-container {
             display: grid;
+            grid-template-columns: 1fr 150px;
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-areas: 
+                "header        header"
+                "nav           sidebar"
+                "maincontent   sidebar"
+                "footer        footer"
+        }
+
+        .header {
+            grid-area: header;
+            font-size: 2rem;
+            text-align: center;
+            background-color: #bada55;
+            padding: 1rem;
+            text-transform: capitalize;
+            color: #069;
+        }
+
+        .nav {
+            grid-area: nav;
+            background-color: #bada55;
+            border-top: 1px solid #024;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            color: #069;
+            padding: 0;
+        }
+
+        .nav ul li {
+            padding: .5rem;
+        }
+
+        .content {
+            grid-area: maincontent;
+            font-size: 1.5rem;
+            
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: darkorange;
+            color: white;
+            padding: .5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer {
+            grid-area: footer;
+            text-align: center;
+            padding: 1rem;
+            background-color: #C0FFEE;
+            color: #069;
+            font-size: 1.2rem;
         }
 
     </style>
 </head>
 
-<body>
-<header>
-    title
+<body class="grid-container">
+
+<header class="header">
+        title
 </header>
 
-<nav>
+<nav class="nav">
     <ul>
         <li>Home</li>
         <li>About</li>
@@ -34,7 +96,7 @@
     </ul>
 </nav>
 
-<main>
+<main class="content">
     <article>
         <h2>Header</h2>
         <p>Cur orgia messis?Green people yell with assimilat
@@ -42,11 +104,13 @@
     </article>
 </main>
 
-<aside>
+<aside class="sidebar">
     Jolly rogers grow on hunger at fort charles!
 </aside>
-<footer>
+
+<footer class="footer">
     copyrights
 </footer>
+
 </body>
 </html>
